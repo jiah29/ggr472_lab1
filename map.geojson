@@ -10,8 +10,7 @@
         "fill": "#ff0000",
         "fill-opacity": 0.5,
         "name": "Sidney Smith",
-        "attractiveness-rating": 3,
-        "primary-purpose": "classes"
+        "attractiveness-rating": 3
       },
       "geometry": {
         "coordinates": [
@@ -36,8 +35,7 @@
         "fill": "#00ff00",
         "fill-opacity": 0.5,
         "name": "Daniels Building",
-        "attractiveness-rating": 5,
-        "primary-purpose": "classes"
+        "attractiveness-rating": 5
       },
       "geometry": {
         "type": "Polygon",
@@ -120,8 +118,7 @@
         "stroke-width": 2,
         "stroke-opacity": 1,
         "name": "King's College Road",
-        "attractiveness-rating": 5,
-        "primary-purpose": "misc"
+        "attractiveness-rating": 5
       },
       "geometry": {
         "coordinates": [
@@ -139,8 +136,7 @@
         "marker-size": "medium",
         "marker-symbol": "star",
         "name": "Varsity Stadium",
-        "attractiveness-rating": 4,
-        "primary-purpose": "exercise"
+        "attractiveness-rating": 4
       },
       "geometry": {
         "coordinates": [-79.39730975223364, 43.66699171865437],
@@ -155,8 +151,7 @@
         "stroke-width": 2,
         "stroke-opacity": 1,
         "name": "Hart House Circle",
-        "attractiveness-rating": 4,
-        "primary-purpose": "misc"
+        "attractiveness-rating": 4
       },
       "geometry": {
         "coordinates": [
