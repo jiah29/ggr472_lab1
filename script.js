@@ -28,22 +28,20 @@ const allThumbsDown = document.getElementsByClassName("fa-thumbs-down");
 var numLikes = 0;
 var numDislikes = 0;
 
-// Iterate through all thumbs up and thumbs down icons and add "click" event listeners
-// to each icon to trigger the like() and dislike() functions
+// Iterate through all thumbs up and thumbs down icons and add "click"
+// event listeners to each icon
 for (let i = 0; i < allThumbsUp.length; i++) {
   allThumbsUp[i].addEventListener("click", function () {
-    like(i, allThumbsUp[i]);
+    like(allThumbsUp[i]);
   });
   allThumbsDown[i].addEventListener("click", function () {
-    dislike(i, allThumbsDown[i]);
+    dislike(allThumbsDown[i]);
   });
 }
 
 // Function to changes the color of the thumbs up icon
-// @Input index: index of the icon clicked based on the order of the icons
-// appearance in the HTML document tree
 // @Input element: the icon element that was clicked
-function like(index, element) {
+function like(element) {
   // check if the icon is already green
   if (element.style.color === "green") {
     // if so, make it revert back to white and decrease numLikes by 1
@@ -54,8 +52,10 @@ function like(index, element) {
     element.style.color = "green";
     numLikes++;
 
-    // corresponding thumbs down icon should be white if the thumbs up icon is green
-    toggleOppositeIcon(index, "fa-thumbs-down");
+    // find the index of the icon clicked
+    const index = Array.from(allThumbsUp).indexOf(element);
+    // toggle off the color of the corresponding thumbs down icon
+    toggleOffOppositeIcon(allThumbsDown[index]);
   }
 
   // recalculate the number of likes and dislikes
@@ -63,10 +63,8 @@ function like(index, element) {
 }
 
 // Function to changes the color of the thumbs down icon
-// @Input index: index of the icon clicked based on the order of the icons
-// appearance in the HTML document tree
 // @Input element: the icon element that was clicked
-function dislike(index, element) {
+function dislike(element) {
   // check if the icon is already red
   if (element.style.color === "red") {
     // if so, make it revert back to white and decrease numDislikes by 1
@@ -77,33 +75,29 @@ function dislike(index, element) {
     element.style.color = "red";
     numDislikes++;
 
-    // corresponding thumbs up icon should be white if the thumbs down icon is red
-    toggleOppositeIcon(index, "fa-thumbs-up");
+    // find the index of the icon clicked
+    const index = Array.from(allThumbsDown).indexOf(element);
+    // toggle off the color of the corresponding thumbs up icon
+    toggleOffOppositeIcon(allThumbsUp[index]);
   }
 
   // recalculate the number of likes and dislikes
   updateLikesAndDislikesCount();
 }
 
-// Function to toggle the color of the opposite icon
-// @Input index: index of the icon clicked based on the order of the icons
-// appearance in the HTML document tree
-// @Input opposite: name of opposite icon to toggle
-function toggleOppositeIcon(index, opposite) {
-  // get the opposite button
-  const oppositeIcon = document.getElementsByClassName(opposite)[index];
-
-  // if opposite is thumbs up and it is green, make it white
-  // and decrease numLikes by 1
-  if (opposite === "fa-thumbs-up" && oppositeIcon.style.color === "green") {
+// Function to toggle off the color of the opposite icon if it is
+// already toggled on (i.e. green or red)
+// @Input oppositeIcon: icon element to toggle off
+function toggleOffOppositeIcon(oppositeIcon) {
+  // if opposite icon is green, make it white and decrease numLikes by 1
+  if (oppositeIcon.style.color === "green") {
     oppositeIcon.style.color = "white";
     numLikes--;
     return;
   }
 
-  // if opposite is thumbs down and it is red, make it white
-  // and decrease numDislikes by 1
-  if (opposite === "fa-thumbs-down" && oppositeIcon.style.color === "red") {
+  // if opposite is red, make it white and decrease numDislikes by 1
+  if (oppositeIcon.style.color === "red") {
     oppositeIcon.style.color = "white";
     numDislikes--;
     return;
