@@ -58,14 +58,14 @@ bolded text in white background with rounded corner*/
   width: 95%;
   height: 90%;
 
+  /** Styling for carousel images */
   img {
-    /** Styling for carousel images */
     border-radius: 5px;
   }
 
-  .carousel-control:hover {
-    /** Carousel controls buttons should have a black
+  /** Carousel controls buttons should have a black
     background with 30% transparency when hovered over */
+  .carousel-control:hover {
     background-color: rgba(0, 0, 0, 0.3);
   }
 }
@@ -92,13 +92,16 @@ at the bottom with centered text*/
   0% {
     color: black;
   }
-  25% {
+  20% {
+    color: blue;
+  }
+  40% {
     color: red;
   }
-  50% {
-    color: yellow;
+  60% {
+    color: orange;
   }
-  75% {
+  80% {
     color: green;
   }
   100% {
