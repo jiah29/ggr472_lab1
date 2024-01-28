@@ -70,6 +70,12 @@ bolded text in white background with rounded corner*/
   }
 }
 
+/** Styling for the reaction (like/dislike) buttons*/
+.reaction-button {
+  cursor: pointer; /** Indicates that the button is clickable */
+  margin-right: 10px;
+}
+
 /** Styling for the footer with fixed position 
 at the bottom with centered text*/
 #footer {
