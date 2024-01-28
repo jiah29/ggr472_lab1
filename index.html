@@ -2,17 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <!--Setting title and icon for browser tab-->
     <title>Places of Interests @ UofT</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
-    <!--Connecting Bootstrap css and custom stylesheet-->
+    <!--Connecting Bootstrap css-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <!--Connectin custom stylesheet-->
     <link rel="stylesheet" href="./style.css" />
     <!--Connecting FontAwesome icons-->
     <link
@@ -89,7 +93,11 @@
     <div class="header">
       <!--A fun hidden animation for header h1 with a tooltip after
       hoverring on it for about 2s-->
-      <h1 data-toggle="tooltip" title="Enjoy the animation!">
+      <h1
+        data-toggle="tooltip"
+        data-placement="bottom"
+        title="Enjoy the animation!"
+      >
         Places that you must visit at UofT
       </h1>
       <h2>(at least before you graduate!)</h2>
@@ -103,10 +111,9 @@
         <a href="https://www.utoronto.ca/" target="_blank"
           >University of Toronto</a
         >
-        is a public university in Toronto, Canada.
-        <br />
-        It is one of the top universities in Canada, and is also a campus with
-        many beautiful places to visit. <br />
+        is a public university in Toronto, Canada. It is one of the top
+        universities in Canada, and is also a campus with many beautiful places
+        to visit. <br />
         UofT has officially published 12 places you must see at UofT in this
         <a
           href="https://www.utoronto.ca/news/doors-open-toronto-12-things-you-must-see-u-t"
@@ -114,7 +121,19 @@
         >
           article</a
         >, but the image carousel below show some of my personal favourites and
-        recommendations!<br />
+        recommendations! <br />
+
+        <!-- Info button for image carousels instruction with popover-->
+        <button
+          type="button"
+          class="btn btn-sm btn-info"
+          data-toggle="popover"
+          title="Using Image Carousel"
+          data-content="You may navigate between images using the controls at the sides of the image. 
+          You may also like or dislike the images by clicking on the thumbs up or thumbs down icons at the bottom of the image respectively."
+        >
+          <i class="fa fa-info-circle"></i> Image Carousel Guide
+        </button>
       </p>
 
       <!-- Image Carousel -->
@@ -139,7 +158,7 @@
               src="https://wdw.utoronto.ca/sites/default/files/styles/scale_width_1220px_/public/assets/images/sidney%20smith%20hall%20cropped.jpg?itok=PrAJLH4V"
               alt="Sidney Smith"
             />
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption">
               <h5>Sidney Smith</h5>
               <p>Photo Credit to Diana Tyszko</p>
               <i
@@ -158,7 +177,7 @@
               src="https://www.daniels.utoronto.ca/sites/default/files/images/daniels_faculty.jpg"
               alt="Daniels Building"
             />
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption">
               <h5>Daniels Building</h5>
               <p>
                 Photo Credit to John H. Daniels Faculty of Architecture,
@@ -180,7 +199,7 @@
               src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Kings_College_Road.jpg"
               alt="King's College Road"
             />
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption">
               <h5>King's College Road</h5>
               <p>Photo Credit to David from Wikimedia Commons</p>
               <i
@@ -199,7 +218,7 @@
               src="https://www.kpe.utoronto.ca/sites/default/files/styles/large/public/image/building/Hybrid_Dome_Stadium_Panorama1.jpg?h=d70f751d&itok=prIGelrf"
               alt="Varsity Centre at UofT"
             />
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption">
               <h5>Varsity Centre</h5>
               <p>Photo Credit to Faculty of Kinesiology & Physical Education</p>
               <i
@@ -218,7 +237,7 @@
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Harthouse_toronto.jpg/1920px-Harthouse_toronto.jpg"
               alt="Hart House Circle"
             />
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption">
               <h5>Hart House Circle</h5>
               <p>Photo Credit to Ivan Hernández</p>
               <i
@@ -263,7 +282,7 @@
     <!--Footer section with dynamically added last refreshed date-->
     <div id="footer">Made by Jia Hao Choo. Last Refreshed on</div>
 
-    <!--Connecting Bootstrap js and custom javascript-->
+    <!--Connecting Bootstrap js-->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -279,6 +298,8 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Connecting custom js-->
     <script src="./script.js"></script>
   </body>
 </html>

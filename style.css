@@ -48,6 +48,12 @@ bolded text in white background with rounded corner*/
     margin-right: auto;
     width: 90%;
   }
+
+  /** Styling for the buttons inside the main section */
+  .btn {
+    font-family: Verdana, sans-serif; /** Priority for Verdana font, else default sans-serif */
+    margin-top: 8px;
+  }
 }
 
 /** Styling for carousel */

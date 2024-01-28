@@ -5,6 +5,17 @@ window.onload = function () {
     " " + date.toDateString() + ".";
 };
 
+// Enable popover globally according to Bootstrap documentation
+$(function () {
+  $('[data-toggle="popover"]').popover();
+});
+
+// Enable tooltips globally according to Bootstrap documentation
+$(function () {
+  // delay tooltip appearance by 2 seconds
+  $('[data-toggle="tooltip"]').tooltip({ delay: { show: 2000, hide: 0 } });
+});
+
 // Function triggered on click of the thumbs up icon
 // Input: index of the icon clicked based on the order of the icons
 // appearance in the HTML document tree
