@@ -1,0 +1,24 @@
+/** Styling to indicate current page item in nav bar with 
+bolded text in white background with rounded corner*/
+#current {
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: fit-content;
+  width: fit-content;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/** Styling for the footer with fixed position 
+at the bottom with centered text*/
+#footer {
+  background-color: #535864;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
