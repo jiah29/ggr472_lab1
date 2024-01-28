@@ -1,3 +1,7 @@
+// =============================================================
+// This script is used for both index.html and suggestions.html.
+// =============================================================
+
 // Function triggered on load to add the current date to the footer
 window.onload = function () {
   const date = new Date();

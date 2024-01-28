@@ -1,3 +1,7 @@
+/** ================================================================ */
+/** This stylesheet is used for both index.html and suggestions.html */
+/** ================================================================ */
+
 /** Styling to indicate current page item in nav bar with 
 bolded text in white background with rounded corner*/
 #current {
