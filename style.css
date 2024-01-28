@@ -54,6 +54,10 @@ bolded text in white background with rounded corner*/
     font-family: Verdana, sans-serif; /** Priority for Verdana font, else default sans-serif */
     margin-top: 8px;
   }
+
+  .outro {
+    height: 90px;
+  }
 }
 
 /** Styling for carousel */

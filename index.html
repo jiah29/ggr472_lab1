@@ -130,7 +130,8 @@
           data-toggle="popover"
           title="Using Image Carousel"
           data-content="You may navigate between images using the controls at the sides of the image. 
-          You may also like or dislike the images by clicking on the thumbs up or thumbs down icons at the bottom of the image respectively."
+          You may also like or dislike the images by clicking on the thumbs up or thumbs down icons at the bottom of the image respectively.
+          A summary of total likes and dislikes can be found in the paragraph below the image carousel."
         >
           <i class="fa fa-info-circle"></i> Image Carousel Guide
         </button>
@@ -272,15 +273,22 @@
         </a>
       </div>
 
-      <!--Outro paragraph with internal link to geojson-->
-      <p>
+      <!--Outro paragraph with internal link to geojson and 
+      summary of likes & dislikes-->
+      <p class="outro">
         You can also view this list of locations on a
         <a href="./map.geojson" target="_blank">map</a>! Hope you enjoy!
+        <br />
+        <!--likes and dislikes count are dynamically adjusted in js
+        using their respective id-->
+        In total, you have liked <span id="likesCount">0</span> images and
+        disliked <span id="dislikesCount">0</span> images.
       </p>
     </div>
 
-    <!--Footer section with dynamically added last refreshed date-->
-    <div id="footer">Made by Jia Hao Choo. Last Refreshed on</div>
+    <!--Footer section with dynamically added last refreshed date using 
+    js through manipulating #footer-->
+    <div id="footer">Made by JH Choo. Last Refreshed on</div>
 
     <!--Connecting Bootstrap js-->
     <script

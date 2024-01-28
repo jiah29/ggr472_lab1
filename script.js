@@ -2,7 +2,7 @@
 window.onload = function () {
   const date = new Date();
   document.getElementById("footer").innerHTML +=
-    " " + date.toDateString() + ".";
+    " " + date.toLocaleDateString() + ".";
 };
 
 // Enable popover globally according to Bootstrap documentation
@@ -17,7 +17,7 @@ $(function () {
 });
 
 // Function triggered on click of the thumbs up icon
-// Input: index of the icon clicked based on the order of the icons
+// @Input index: index of the icon clicked based on the order of the icons
 // appearance in the HTML document tree
 function like(index) {
   // get all thumbs up icons
@@ -36,10 +36,13 @@ function like(index) {
     // corresponding thumbs down icon should be white if the thumbs up icon is green
     toggleOppositeIcon(index, "fa-thumbs-down");
   }
+
+  // recalculate the number of likes and dislikes
+  calculateLikesAndDislikes();
 }
 
 // Function triggered on click of the thumbs down icon
-// Input: index of the icon clicked based on the order of the icons
+// @Input index: index of the icon clicked based on the order of the icons
 // appearance in the HTML document tree
 function dislike(index) {
   // get all thumbs up icons
@@ -58,24 +61,58 @@ function dislike(index) {
     // corresponding thumbs up icon should be white if the thumbs down icon is red
     toggleOppositeIcon(index, "fa-thumbs-up");
   }
+
+  // recalculate the number of likes and dislikes
+  calculateLikesAndDislikes();
 }
 
 // Function to toggle the color of the opposite icon
-// Input: index of the icon clicked based on the order of the icons
+// @Input index: index of the icon clicked based on the order of the icons
 // appearance in the HTML document tree
-// Input: opposite icon to the one clicked (name of FontAwesome class)
+// @Input opposite: name of opposite icon to toggle
 function toggleOppositeIcon(index, opposite) {
   // get the opposite button
   const oppositeIcon = document.getElementsByClassName(opposite)[index];
 
-  // check if the button is already disabled
+  // if opposite is thumbs up and it is green, make it white
   if (opposite === "fa-thumbs-up" && oppositeIcon.style.color === "green") {
     oppositeIcon.style.color = "white";
     return;
   }
 
+  // if opposite is thumbs down and it is red, make it white
   if (opposite === "fa-thumbs-down" && oppositeIcon.style.color === "red") {
     oppositeIcon.style.color = "white";
     return;
   }
+}
+
+// global variables to store the number of likes and dislikes
+var numLikes = 0;
+var numDislikes = 0;
+
+// Function to calculate the number of likes and dislikes
+function calculateLikesAndDislikes() {
+  // get all thumbs up and thumbs down icons
+  const allThumbsUp = document.getElementsByClassName("fa-thumbs-up");
+  const allThumbsDown = document.getElementsByClassName("fa-thumbs-down");
+
+  // reset the number of likes and dislikes
+  numLikes = 0;
+  numDislikes = 0;
+
+  // increment the number of likes and dislikes based on the color of the icons
+  // through iterating through the icons
+  for (let i = 0; i < allThumbsUp.length; i++) {
+    if (allThumbsUp[i].style.color === "green") {
+      numLikes++;
+    }
+    if (allThumbsDown[i].style.color === "red") {
+      numDislikes++;
+    }
+  }
+
+  // update the number of likes and dislikes in the HTML document
+  document.getElementById("likesCount").innerHTML = numLikes;
+  document.getElementById("dislikesCount").innerHTML = numDislikes;
 }
