@@ -12,6 +12,22 @@ bolded text in white background with rounded corner*/
   padding-right: 5px;
 }
 
+/** Styling for main header */
+h1 {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10pt;
+  font-family: Verdana, sans-serif; /** Priority for Verdana font, else default sans-serif */
+}
+
+/** Styling for sub-header */
+h2 {
+  text-align: center;
+  font-style: italic;
+  font-family: Verdana, sans-serif; /** Priority for Verdana font, else default sans-serif */
+  font-size: large;
+}
+
 /** Styling for the footer with fixed position 
 at the bottom with centered text*/
 #footer {
