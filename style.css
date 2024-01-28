@@ -15,7 +15,7 @@ bolded text in white background with rounded corner*/
 /** Styling for header section which should always be centered */
 .header {
   text-align: center;
-  margin-top: 10pt;
+  margin-top: 8pt;
   margin-bottom: 10pt;
 
   /** h1 Styling under header */
@@ -40,10 +40,29 @@ bolded text in white background with rounded corner*/
   }
 }
 
+/** Styling for carousel */
+.carousel {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  height: 90%;
+
+  img {
+    /** Styling for carousel images */
+    border-radius: 5px;
+  }
+
+  .carousel-control:hover {
+    /** Carousel controls buttons should have a black
+    background with 30% transparency when hovered over */
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
 /** Styling for the footer with fixed position 
 at the bottom with centered text*/
 #footer {
-  background-color: #535864;
+  background-color: #353a40;
   position: fixed;
   bottom: 0;
   width: 100%;
