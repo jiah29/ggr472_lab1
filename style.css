@@ -40,10 +40,21 @@ bolded text in white background with rounded corner*/
   }
 }
 
+.main {
+  /** Styling for parapraph inside the main section */
+  p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+}
+
 /** Styling for carousel */
 .carousel {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 10px;
   width: 95%;
   height: 90%;
 
