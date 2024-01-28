@@ -1,5 +1,5 @@
 // =============================================================
-// This script is used for both index.html and suggestions.html.
+// This script is used for index.html.
 // =============================================================
 
 // Function triggered on load to add the current date to the footer

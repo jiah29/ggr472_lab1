@@ -59,8 +59,33 @@ bolded text in white background with rounded corner*/
     margin-top: 8px;
   }
 
+  /** Styling for outro paragraph before footer */
   .outro {
     height: 90px;
+  }
+
+  /** Styling for the form inside the main section */
+  form {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    border-radius: 5px;
+    padding: 10px 10px 1px 10px;
+    background-color: rgba(211, 211, 211, 0.3);
+    height: fit-content;
+
+    /** Styling for the form labels */
+    .col-form-label {
+      font-weight: bold;
+    }
+
+    /** Styling for buttons inside the form */
+    /* .btn {
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-left: auto;
+    } */
   }
 }
 

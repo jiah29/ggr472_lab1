@@ -106,11 +106,133 @@
     </div>
 
     <!--Main content section-->
-    <div class="main"></div>
-
-    <!--Footer section with dynamically added last refreshed date using 
-    js through manipulating #footer-->
-    <div id="footer">Made by JH Choo. Last Refreshed on</div>
+    <div class="main">
+      <!--Form for user to fill out for suggestions-->
+      <form>
+        <!--Email field-->
+        <div class="form-group row">
+          <label for="inputEmail" class="col-lg-2 col-form-label">Email</label>
+          <div class="col-lg-10">
+            <input
+              type="email"
+              class="form-control"
+              id="inputEmail"
+              placeholder="example@email.com"
+            />
+          </div>
+        </div>
+        <!--Name of location field-->
+        <div class="form-group row">
+          <label for="inputLocationName" class="col-lg-2 col-form-label"
+            >Name of Location</label
+          >
+          <div class="col-lg-10">
+            <input
+              class="form-control"
+              id="inputLocationName"
+              placeholder="Location Name"
+            />
+          </div>
+        </div>
+        <!--User picture of location field-->
+        <div class="form-group row">
+          <label for="inputFile" class="col-lg-2 col-form-label"
+            >Do you have a picture of the location that you want to
+            share?</label
+          >
+          <div class="col-lg-10">
+            <input
+              type="file"
+              class="form-control-file"
+              id="inputFile"
+              placeholder="Location Name"
+            />
+          </div>
+        </div>
+        <!--Description of place field-->
+        <div class="form-group row">
+          <label for="inputDescription" class="col-lg-2 col-form-label"
+            >Description of the place</label
+          >
+          <div class="col-lg-10">
+            <textarea
+              class="form-control"
+              id="inputDescription"
+              rows="3"
+            ></textarea>
+          </div>
+        </div>
+        <!--User rating field-->
+        <fieldset class="form-group">
+          <div class="row">
+            <label class="col-form-label col-lg-2 pt-0">Rating</label>
+            <!--Individual rating's radiobuttons-->
+            <div class="col-lg-10">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="ratings"
+                  id="rating1"
+                  value="1"
+                  checked
+                />
+                <label class="form-check-label" for="rating1">
+                  1 - Ehh, you won't miss out much if you don't visit
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="ratings"
+                  id="rating2"
+                  value="2"
+                />
+                <label class="form-check-label" for="rating2"> 2 </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="ratings"
+                  id="rating3"
+                  value="3"
+                />
+                <label class="form-check-label" for="rating3"> 3 </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="ratings"
+                  id="rating4"
+                  value="4"
+                />
+                <label class="form-check-label" for="rating4"> 4 </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="ratings"
+                  id="rating5"
+                  value="5"
+                />
+                <label class="form-check-label" for="rating5">
+                  5 - Amazing, an absolute must-visit!
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="form-group row text-right">
+          <div class="col-sm-12">
+            <button type="submit" class="btn btn-primary">Submit!</button>
+          </div>
+        </div>
+      </form>
+    </div>
 
     <!--Connecting Bootstrap js-->
     <script
@@ -128,8 +250,5 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-
-    <!-- Connecting custom js-->
-    <script src="./script.js"></script>
   </body>
 </html>
