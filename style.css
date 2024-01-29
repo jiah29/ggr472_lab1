@@ -80,12 +80,11 @@ bolded text in white background with rounded corner*/
       font-weight: bold;
     }
 
-    /** Styling for buttons inside the form */
-    /* .btn {
-      margin-top: 0px;
-      margin-right: 0px;
-      margin-left: auto;
-    } */
+    /** Styling for the form input placeholder values */
+    input::placeholder,
+    textarea::placeholder {
+      font-style: italic;
+    }
   }
 }
 
