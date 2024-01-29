@@ -1,12 +1,14 @@
 // =============================================================
-// This script is used for index.html.
+// This script is used for index.html and suggestions.html.
 // =============================================================
 
 // Function triggered on load to add the current date to the footer
 window.onload = function () {
   const date = new Date();
-  document.getElementById("footer").innerHTML +=
-    " " + date.toLocaleDateString() + ".";
+  const footer = document.getElementById("footer");
+  // if footer exists, add the current date to it
+  // need to check this since not all page have a footer
+  footer ? (footer.innerHTML += " " + date.toLocaleDateString() + ".") : null;
 };
 
 // Enable popover globally according to Bootstrap documentation
@@ -108,4 +110,15 @@ function toggleOffOppositeIcon(oppositeIcon) {
 function updateLikesAndDislikesCount() {
   document.getElementById("likesCount").innerHTML = numLikes;
   document.getElementById("dislikesCount").innerHTML = numDislikes;
+}
+
+// Add event handler to form if it exists in the current page
+const suggestionForm = document.getElementById("suggestion-form");
+suggestionForm
+  ? suggestionForm.addEventListener("submit", submitSuggestion)
+  : null;
+
+// Function to inform user that their suggestion has been submitted
+function submitSuggestion() {
+  alert("Form submitted! Thanks for your suggestion!");
 }

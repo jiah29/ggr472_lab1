@@ -108,7 +108,7 @@
     <!--Main content section-->
     <div class="main">
       <!--Form for user to fill out for suggestions-->
-      <form>
+      <form id="suggestion-form">
         <!--Email field-->
         <div class="form-group row">
           <label for="inputEmail" class="col-lg-2 col-form-label">Email</label>
@@ -121,16 +121,17 @@
             />
           </div>
         </div>
-        <!--Name of location field-->
+        <!--Name of location field - required-->
         <div class="form-group row">
           <label for="inputLocationName" class="col-lg-2 col-form-label"
-            >Name of Location</label
+            >Name of Location*</label
           >
           <div class="col-lg-10">
             <input
               class="form-control"
               id="inputLocationName"
               placeholder="Location Name"
+              required
             />
           </div>
         </div>
@@ -159,13 +160,14 @@
               class="form-control"
               id="inputDescription"
               rows="3"
+              placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida dictum."
             ></textarea>
           </div>
         </div>
-        <!--User rating field-->
+        <!--User rating field - required-->
         <fieldset class="form-group">
           <div class="row">
-            <label class="col-form-label col-lg-2 pt-0">Rating</label>
+            <legend class="col-form-label col-lg-2 pt-0">Rating*</legend>
             <!--Individual rating's radiobuttons-->
             <div class="col-lg-10">
               <div class="form-check">
@@ -175,7 +177,7 @@
                   name="ratings"
                   id="rating1"
                   value="1"
-                  checked
+                  required
                 />
                 <label class="form-check-label" for="rating1">
                   1 - Ehh, you won't miss out much if you don't visit
@@ -188,6 +190,7 @@
                   name="ratings"
                   id="rating2"
                   value="2"
+                  required
                 />
                 <label class="form-check-label" for="rating2"> 2 </label>
               </div>
@@ -198,6 +201,7 @@
                   name="ratings"
                   id="rating3"
                   value="3"
+                  required
                 />
                 <label class="form-check-label" for="rating3"> 3 </label>
               </div>
@@ -208,6 +212,7 @@
                   name="ratings"
                   id="rating4"
                   value="4"
+                  required
                 />
                 <label class="form-check-label" for="rating4"> 4 </label>
               </div>
@@ -218,6 +223,7 @@
                   name="ratings"
                   id="rating5"
                   value="5"
+                  required
                 />
                 <label class="form-check-label" for="rating5">
                   5 - Amazing, an absolute must-visit!
@@ -250,5 +256,8 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+    <!--Connecting custom js-->
+    <script src="./script.js"></script>
   </body>
 </html>
