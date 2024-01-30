@@ -1,6 +1,10 @@
-// =============================================================
+// ============================================================================
 // This script is used for index.html and suggestions.html.
-// =============================================================
+// Some functions are from Bootstrap v4.0 documentation to support
+// Bootstrap-specific features, such as popovers and tooltips.
+// Reference: https://getbootstrap.com/docs/4.0/
+// Created by Jia Hao Choo for GGR472 Lab 1 (Winter 2024)
+// ============================================================================
 
 // Function triggered on load to add the current date to the footer
 window.onload = function () {
@@ -11,12 +15,14 @@ window.onload = function () {
   footer ? (footer.innerHTML += " " + date.toLocaleDateString() + ".") : null;
 };
 
-// Enable popover globally according to Bootstrap documentation
+// Enable popover globally according to Bootstrap v4.0 documentation:
+// https://getbootstrap.com/docs/4.0/components/popovers/
 $(function () {
   $('[data-toggle="popover"]').popover();
 });
 
-// Enable tooltips globally according to Bootstrap documentation
+// Enable tooltips globally according to Bootstrap v4.0 documentation
+// https://getbootstrap.com/docs/4.0/components/tooltips/
 $(function () {
   // delay tooltip appearance by 2 seconds
   $('[data-toggle="tooltip"]').tooltip({ delay: { show: 2000, hide: 0 } });
