@@ -15,13 +15,13 @@ window.onload = function () {
   footer ? (footer.innerHTML += " " + date.toLocaleDateString() + ".") : null;
 };
 
-// Enable popover globally according to Bootstrap v4.0 documentation:
+// Enable Bootstrap popover globally according to
 // https://getbootstrap.com/docs/4.0/components/popovers/
 $(function () {
   $('[data-toggle="popover"]').popover();
 });
 
-// Enable tooltips globally according to Bootstrap v4.0 documentation
+// Enable Bootstrap tooltips globally according to
 // https://getbootstrap.com/docs/4.0/components/tooltips/
 $(function () {
   // delay tooltip appearance by 2 seconds
