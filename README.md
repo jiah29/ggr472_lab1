@@ -2,3 +2,5 @@
 GGR472 Lab 1 - Jia Hao Choo
 
 This repository contains my work for Lab 1 of GGR472: Developing Web Maps (Winter 2024), which focuses on creating Geospatial data with GeoJSON and building a webpage using HTML, CSS (Bootstrap) and JavaScript.
+
+You may access the webpage here: https://jiah29.github.io/ggr472_lab1/
